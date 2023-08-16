@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Food Graph</title>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <canvas id="myChart"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Burger', 'Pizza', 'Eggs', 'Chicken', 'Tacos'],
+      datasets: [{
+        label: '# of Votes',
+        data: [1, 4, 3, 1, 12],
+        backgroundColor: [
+          'rgba(2, 26, 144, 0.2)',
+          'rgba(206, 16, 16, 0.2)',
+          'rgba(236, 219, 0, 0.2)',
+          'rgba(85, 0, 255, 0.2)',
+          'rgba(0, 255, 4, 0.2)'
+        ],
+        borderColor: [
+          'rgba(2, 26, 144, 1)',
+          'rgba(206, 16, 16, 1)',
+          'rgba(236, 219, 0, 1)',
+          'rgba(85, 0, 255, 1)',
+          'rgba(0, 255, 4, 1)'
+        ],
+        borderWidth: 5
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginatZero: true
+        }
+      },
+      indexAxis: 'y'
+    }
+  });
+</script>
+</body>
+</html>
