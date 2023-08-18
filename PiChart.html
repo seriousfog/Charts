@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Pi Graph</title>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div style="width: 400px">
+<canvas id="myChart"></canvas>
+</div>
+<script>
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+      datasets: [{
+        label: 'Donut Chart',
+        data: [300, 50, 200, 250, 150, 333],
+        backgroundColor:[
+          'rgb(135,35,70)',
+          'rgb(41,182,182)',
+          'rgb(146,229,61)',
+          'rgb(110,76,35)',
+          'rgb(218,56,44)',
+          'rgb(150,46,144)',
+        ],
+        hoverOffset: 1
+      }]
+    }
+  });
+</script>
+<div style="width: 400px">
+  <canvas id="myChart2"></canvas>
+</div>
+<script>
+  var cty = document.getElementById('myChart2');
+  var myChart2 = new Chart(cty, {
+    type: 'pie',
+    data: {
+      labels: ['Burger', 'Fries', 'Tacos', 'Eggs', 'Chicken', 'Burrito'],
+      datasets: [{
+        label: 'Pie Chart',
+        data: [300, 50, 500, 200, 450, 200],
+        backgroundColor:[
+          'rgb(42,174,222)',
+          'rgb(240,215,50)',
+          'rgb(131,255,0)',
+          'rgb(222,165,42)',
+          'rgb(79,44,9)',
+          'rgb(47,79,9)',
+        ],
+        hoverOffset: 1
+      }]
+    }
+  });
+</script>
+</script>
+<div style="width: 400px">
+  <canvas id="myChart3"></canvas>
+</div>
+<script>
+  var ctz = document.getElementById('myChart3');
+  var myChart3 = new Chart(ctz, {
+    type: 'polarArea',
+    data: {
+      labels: [
+              'Golf', 'Handball', 'Tennis', 'Soccer', 'Football', 'Baseball'
+      ],
+      datasets: [{
+        label: ['Polar Area Chart'],
+        data: [4, 1, 8, 24, 26, 8],
+        backgroundColor:[
+          'rgb(255, 100, 130)',
+          'rgb(80, 190, 190)',
+          'rgb(255, 200, 85)',
+          'rgb(6,24,24)',
+          'rgb(110,76,35)',
+          'rgb(180,176,161)',
+        ],
+      }]
+    }
+  });
+</script>
+</body>
+</html>
