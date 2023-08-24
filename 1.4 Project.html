@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Top Mangas</title>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div style="width:2000px">
+  <canvas id="myChart"></canvas>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['One Piece', 'Golgo 13', 'Case Closed', 'Dragon Ball', 'Doraemon', 'Naruto', 'Slam Dunk', 'Tokyo Beat Cops',
+        'Demon Slayer', 'Oishinbo', 'Bleach', 'Jojos Bizzare Adventure', 'Attack on Titan', 'Astro Boy', 'Fist of the North Star',
+        'The Kindaichi Case Files', 'Touch', 'Kingdom', 'Captain Tsubasa', 'Sazae-san', 'Baki the Grappler', 'My Hero Academia',
+        'Hunter x Hunter', 'Vagabond', 'Fullmetal Alchemist', 'Jujutsu Kaisen', 'Sangokushi', 'YuYu Hakusho', 'Kinnikuman', 'Fairy Tail',],
+      datasets: [{
+        label: '# of Sales',
+        data: [516000000, 300000000, 270000000, 260000000, 250000000, 250000000, 170000000, 156500000, 150000000, 135000000, 130000000,
+          120000000, 110000000, 100000000, 100000000, 100000000, 100000000, 99000000, 90000000, 86000000, 85000000, 85000000,
+          84000000, 82000000, 80000000, 80000000, 80000000, 78000000, 77000000, 72000000],
+        backgroundColor: [
+          'rgba(232,203,10, 0.2)',
+          'rgba(234,19,19, 0.2)',
+          'rgba(137,229,74, 0.2)',
+          'rgba(236,124,13, 0.2)',
+          'rgba(49,156,243, 0.2)',
+          'rgba(161,62,6, 0.2)',
+          'rgba(93,61,25, 0.2)',
+          'rgba(236,0,197, 0.2)',
+          'rgba(185,196,29, 0.2)',
+          'rgba(134,204,11, 0.2)',
+          'rgba(224,20,68, 0.2)',
+          'rgba(114,16,206, 0.2)',
+          'rgba(236, 219, 0, 0.2)',
+          'rgba(85, 0, 255, 0.2)',
+          'rgba(0, 255, 4, 0.2)',
+          'rgba(2, 26, 144, 0.2)',
+          'rgba(206, 16, 16, 0.2)',
+          'rgba(236, 219, 0, 0.2)',
+          'rgba(85, 0, 255, 0.2)',
+          'rgba(0, 255, 4, 0.2)',
+          'rgba(2, 26, 144, 0.2)',
+          'rgba(206, 16, 16, 0.2)',
+          'rgba(236, 219, 0, 0.2)',
+          'rgba(85, 0, 255, 0.2)',
+          'rgba(0, 255, 4, 0.2)',
+          'rgba(2, 26, 144, 0.2)',
+          'rgba(206, 16, 16, 0.2)',
+          'rgba(236, 219, 0, 0.2)',
+          'rgba(85, 0, 255, 0.2)',
+          'rgba(0, 255, 4, 0.2)'
+        ],
+        borderColor: [
+          'rgba(232,203,10, 1)',
+          'rgba(234,19,19, 1)',
+          'rgba(137,229,74, 1)',
+          'rgba(236,124,13, 1)',
+          'rgba(49,156,243, 1)',
+          'rgba(161,62,6, 1)',
+          'rgba(93,61,25, 1)',
+          'rgba(236,0,197, 1)',
+          'rgba(185,196,29, 1)',
+          'rgba(134,204,11, 1)',
+          'rgba(224,20,68, 1)',
+          'rgba(114,16,206, 1)',
+          'rgba(236, 219, 0, 1)',
+          'rgba(85, 0, 255, 1)',
+          'rgba(0, 255, 4, 1)',
+          'rgba(2, 26, 144, 1)',
+          'rgba(206, 16, 16, 1)',
+          'rgba(236, 219, 0, 1)',
+          'rgba(85, 0, 255, 1)',
+          'rgba(0, 255, 4, 1)',
+          'rgba(2, 26, 144, 1)',
+          'rgba(206, 16, 16, 1)',
+          'rgba(236, 219, 0, 1)',
+          'rgba(85, 0, 255, 1)',
+          'rgba(0, 255, 4, 1)',
+          'rgba(2, 26, 144, 1)',
+          'rgba(206, 16, 16, 1)',
+          'rgba(236, 219, 0, 1)',
+          'rgba(85, 0, 255, 1)',
+          'rgba(0, 255, 4, 1)'
+        ],
+        borderWidth: 5
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginatZero: true,
+          title: {
+            display: true,
+            text: 'Manga Titles'
+          }
+        },
+        x: {
+          beginatZero: true,
+          title: {
+            display: true,
+            text: 'Total Sales'
+          }
+        }
+      },
+      indexAxis: 'y'
+    }
+  });
+</script>
+<br><br><br><br><br><br><br><br><br><br>
+<div style="width:1000px">
+  <canvas id="myChart2"></canvas>
+</div>
+<script>
+  var cty = document.getElementById('myChart2');
+  var myChart2 = new Chart(cty, {
+    type: 'doughnut',
+    data: {
+      labels: ['One Piece', 'Golgo 13', 'Case Closed', 'Dragon Ball', 'Doraemon', 'Naruto', 'Slam Dunk', 'Tokyo Beat Cops',
+        'Demon Slayer', 'Oishinbo', 'Bleach', 'Jojos Bizzare Adventure', 'Attack on Titan', 'Astro Boy', 'Fist of the North Star',
+        'The Kindaichi Case Files', 'Touch', 'Kingdom', 'Captain Tsubasa', 'Sazae-san', 'Baki the Grappler', 'My Hero Academia',
+        'Hunter x Hunter', 'Vagabond', 'Fullmetal Alchemist', 'Jujutsu Kaisen', 'Sangokushi', 'YuYu Hakusho', 'Kinnikuman', 'Fairy Tail',],
+      datasets: [{
+        label: '# of Sales',
+        data: [516000000, 300000000, 270000000, 260000000, 250000000, 250000000, 170000000, 156500000, 150000000, 135000000, 130000000,
+          120000000, 110000000, 100000000, 100000000, 100000000, 100000000, 99000000, 90000000, 86000000, 85000000, 85000000,
+          84000000, 82000000, 80000000, 80000000, 80000000, 78000000, 77000000, 72000000],
+        backgroundColor: [
+          'rgba(232,203,10, 0.2)',
+          'rgba(234,19,19, 0.2)',
+          'rgba(137,229,74, 0.2)',
+          'rgba(236,124,13, 0.2)',
+          'rgba(49,156,243, 0.2)',
+          'rgba(161,62,6, 0.2)',
+          'rgba(93,61,25, 0.2)',
+          'rgba(236,0,197, 0.2)',
+          'rgba(185,196,29, 0.2)',
+          'rgba(134,204,11, 0.2)',
+          'rgba(224,20,68, 0.2)',
+          'rgba(114,16,206, 0.2)',
+          'rgba(236, 219, 0, 0.2)',
+          'rgba(85, 0, 255, 0.2)',
+          'rgba(0, 255, 4, 0.2)',
+          'rgba(2, 26, 144, 0.2)',
+          'rgba(206, 16, 16, 0.2)',
+          'rgba(236, 219, 0, 0.2)',
+          'rgba(85, 0, 255, 0.2)',
+          'rgba(0, 255, 4, 0.2)',
+          'rgba(2, 26, 144, 0.2)',
+          'rgba(206, 16, 16, 0.2)',
+          'rgba(236, 219, 0, 0.2)',
+          'rgba(85, 0, 255, 0.2)',
+          'rgba(0, 255, 4, 0.2)',
+          'rgba(2, 26, 144, 0.2)',
+          'rgba(206, 16, 16, 0.2)',
+          'rgba(236, 219, 0, 0.2)',
+          'rgba(85, 0, 255, 0.2)',
+          'rgba(0, 255, 4, 0.2)'
+        ],
+        borderColor: [
+          'rgba(232,203,10, 1)',
+          'rgba(234,19,19, 1)',
+          'rgba(137,229,74, 1)',
+          'rgba(236,124,13, 1)',
+          'rgba(49,156,243, 1)',
+          'rgba(161,62,6, 1)',
+          'rgba(93,61,25, 1)',
+          'rgba(236,0,197, 1)',
+          'rgba(185,196,29, 1)',
+          'rgba(134,204,11, 1)',
+          'rgba(224,20,68, 1)',
+          'rgba(114,16,206, 1)',
+          'rgba(236, 219, 0, 1)',
+          'rgba(85, 0, 255, 1)',
+          'rgba(0, 255, 4, 1)',
+          'rgba(2, 26, 144, 1)',
+          'rgba(206, 16, 16, 1)',
+          'rgba(236, 219, 0, 1)',
+          'rgba(85, 0, 255, 1)',
+          'rgba(0, 255, 4, 1)',
+          'rgba(2, 26, 144, 1)',
+          'rgba(206, 16, 16, 1)',
+          'rgba(236, 219, 0, 1)',
+          'rgba(85, 0, 255, 1)',
+          'rgba(0, 255, 4, 1)',
+          'rgba(2, 26, 144, 1)',
+          'rgba(206, 16, 16, 1)',
+          'rgba(236, 219, 0, 1)',
+          'rgba(85, 0, 255, 1)',
+          'rgba(0, 255, 4, 1)'
+        ],
+        borderWidth: 5
+      }]
+    },
+    options: {
+      scales: {
+        x: {
+          beginatZero: true,
+          title: {
+            display: true,
+            text: '30 Highest Selling Mangas'
+          }
+        }
+      },
+      indexAxis: 'y'
+    }
+  });
+</script>
+</script>
+<br><br><br><br><br><br><br><br><br><br>
+<div style="width:1000px">
+  <canvas id="myChart3"></canvas>
+</div>
+<script>
+  var ctz = document.getElementById('myChart3');
+  var myChart3 = new Chart(ctz, {
+    type: 'pie',
+    data: {
+      labels: ['One Piece', 'Golgo 13', 'Case Closed', 'Dragon Ball', 'Doraemon', 'Naruto', 'Slam Dunk', 'Tokyo Beat Cops',
+        'Demon Slayer', 'Oishinbo', 'Bleach', 'Jojos Bizzare Adventure', 'Attack on Titan', 'Astro Boy', 'Fist of the North Star',
+        'The Kindaichi Case Files', 'Touch', 'Kingdom', 'Captain Tsubasa', 'Sazae-san', 'Baki the Grappler', 'My Hero Academia',
+        'Hunter x Hunter', 'Vagabond', 'Fullmetal Alchemist', 'Jujutsu Kaisen', 'Sangokushi', 'YuYu Hakusho', 'Kinnikuman', 'Fairy Tail',],
+      datasets: [{
+        label: '# of Sales',
+        data: [516000000, 300000000, 270000000, 260000000, 250000000, 250000000, 170000000, 156500000, 150000000, 135000000, 130000000,
+          120000000, 110000000, 100000000, 100000000, 100000000, 100000000, 99000000, 90000000, 86000000, 85000000, 85000000,
+          84000000, 82000000, 80000000, 80000000, 80000000, 78000000, 77000000, 72000000],
+        backgroundColor: [
+          'rgba(232,203,10, 0.2)',
+          'rgba(234,19,19, 0.2)',
+          'rgba(137,229,74, 0.2)',
+          'rgba(236,124,13, 0.2)',
+          'rgba(49,156,243, 0.2)',
+          'rgba(161,62,6, 0.2)',
+          'rgba(93,61,25, 0.2)',
+          'rgba(236,0,197, 0.2)',
+          'rgba(185,196,29, 0.2)',
+          'rgba(134,204,11, 0.2)',
+          'rgba(224,20,68, 0.2)',
+          'rgba(114,16,206, 0.2)',
+          'rgba(236, 219, 0, 0.2)',
+          'rgba(85, 0, 255, 0.2)',
+          'rgba(0, 255, 4, 0.2)',
+          'rgba(2, 26, 144, 0.2)',
+          'rgba(206, 16, 16, 0.2)',
+          'rgba(236, 219, 0, 0.2)',
+          'rgba(85, 0, 255, 0.2)',
+          'rgba(0, 255, 4, 0.2)',
+          'rgba(2, 26, 144, 0.2)',
+          'rgba(206, 16, 16, 0.2)',
+          'rgba(236, 219, 0, 0.2)',
+          'rgba(85, 0, 255, 0.2)',
+          'rgba(0, 255, 4, 0.2)',
+          'rgba(2, 26, 144, 0.2)',
+          'rgba(206, 16, 16, 0.2)',
+          'rgba(236, 219, 0, 0.2)',
+          'rgba(85, 0, 255, 0.2)',
+          'rgba(0, 255, 4, 0.2)'
+        ],
+        borderColor: [
+          'rgba(232,203,10, 1)',
+          'rgba(234,19,19, 1)',
+          'rgba(137,229,74, 1)',
+          'rgba(236,124,13, 1)',
+          'rgba(49,156,243, 1)',
+          'rgba(161,62,6, 1)',
+          'rgba(93,61,25, 1)',
+          'rgba(236,0,197, 1)',
+          'rgba(185,196,29, 1)',
+          'rgba(134,204,11, 1)',
+          'rgba(224,20,68, 1)',
+          'rgba(114,16,206, 1)',
+          'rgba(236, 219, 0, 1)',
+          'rgba(85, 0, 255, 1)',
+          'rgba(0, 255, 4, 1)',
+          'rgba(2, 26, 144, 1)',
+          'rgba(206, 16, 16, 1)',
+          'rgba(236, 219, 0, 1)',
+          'rgba(85, 0, 255, 1)',
+          'rgba(0, 255, 4, 1)',
+          'rgba(2, 26, 144, 1)',
+          'rgba(206, 16, 16, 1)',
+          'rgba(236, 219, 0, 1)',
+          'rgba(85, 0, 255, 1)',
+          'rgba(0, 255, 4, 1)',
+          'rgba(2, 26, 144, 1)',
+          'rgba(206, 16, 16, 1)',
+          'rgba(236, 219, 0, 1)',
+          'rgba(85, 0, 255, 1)',
+          'rgba(0, 255, 4, 1)'
+        ],
+        borderWidth: 5
+      }]
+    },
+    options: {
+      scales: {
+        x: {
+          beginatZero: true,
+          title: {
+            display: true,
+            text: '30 Highest Selling Mangas'
+          }
+        }
+      },
+      indexAxis: 'y'
+    }
+  });
+</script>
+<br><br><br><br><br><br><br><br><br><br>
+<div style="width:1000px">
+  <canvas id="myChart4"></canvas>
+</div>
+<script>
+  var cta = document.getElementById('myChart4');
+  var myChart4 = new Chart(cta, {
+    type: 'line',
+    data: {
+      labels: ['One Piece', 'Golgo 13', 'Case Closed', 'Dragon Ball', 'Doraemon', 'Naruto', 'Slam Dunk', 'Tokyo Beat Cops',
+        'Demon Slayer', 'Oishinbo', 'Bleach', 'Jojos Bizzare Adventure', 'Attack on Titan', 'Astro Boy', 'Fist of the North Star',
+        'The Kindaichi Case Files', 'Touch', 'Kingdom', 'Captain Tsubasa', 'Sazae-san', 'Baki the Grappler', 'My Hero Academia',
+        'Hunter x Hunter', 'Vagabond', 'Fullmetal Alchemist', 'Jujutsu Kaisen', 'Sangokushi', 'YuYu Hakusho', 'Kinnikuman', 'Fairy Tail',],
+      datasets: [{
+        label: '# of Sales',
+        data: [516000000, 300000000, 270000000, 260000000, 250000000, 250000000, 170000000, 156500000, 150000000, 135000000, 130000000,
+          120000000, 110000000, 100000000, 100000000, 100000000, 100000000, 99000000, 90000000, 86000000, 85000000, 85000000,
+          84000000, 82000000, 80000000, 80000000, 80000000, 78000000, 77000000, 72000000],
+        borderColor: 'rgb(32,129,48)',
+      }]
+    },
+    options: {
+      scales: {
+        x: {
+          beginatZero: true,
+          title: {
+            display: true,
+            text: '30 Highest Selling Mangas'
+          }
+        }
+      },
+      indexAxis: 'y'
+    }
+  });
+</script>
+</body>
+</html>
